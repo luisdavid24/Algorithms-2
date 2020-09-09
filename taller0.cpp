@@ -68,24 +68,55 @@ void vectorProcedimiento(){
 }
 
 
-int main(){ 
-//	cout<<"Escriba el valor del radio :";
-//	cin>>radio;
-//	figurasEsfericas();
-
-//	cout<<"Escriba el valor del lado :";
-//	cin>>lado;
-//	figurasCuadradas();
-
-//	vectorProcedimiento();	
+int main(){ 	
+	int condicion=0;
+	cout<<"---------------------------"<<endl;
+	cout<<"---------------------------"<<endl;
+	cout<<"--       Bienvenido      --"<<endl;
 	
-	int indice=0;
-	while(indice>=0){
-		cout<<"---------------------------"<<endl;
-		cout<<"---------------------------"<<endl;
-		cout<<"--       Bienvenido      --"<<endl;
+	while(condicion>=0){
+	
+		cout<<"Seleccion la opcion que desea: "<<endl;
+		cout<<"1.Saludo "<<endl;
+		cout<<"2.Tamaño en bytes "<<endl;
+		cout<<"3.Perimetro, area y volumen de una esfera "<<endl;
+		cout<<"4.Perimetro y area de un cuadrado y volumen de un cubo. "<<endl;
+		cout<<"5.Doce numero en un vector."<<endl;
+		cout<<"Si quiere salir escribe -1 "<<endl;
+		cout<<"Digite su opcion: ";
+		cin>>condicion;
+		switch(condicion){
+			case 1:
+				cout<<"Falta esta parte"<<endl;
+			break;
+			case 2:
+				cout<<"Falta esta parte"<<endl;
+			break;
+			case 3:
+					cout<<"Escriba el valor del radio :";
+					cin>>radio;
+					figurasEsfericas();	
+					cout<<endl;			
+			break;
+			case 4:
+				cout<<"Escriba el valor del lado :";
+				cin>>lado;
+				figurasCuadradas();	
+				cout<<endl;			
+			break;
+			case 5:
+				vectorProcedimiento();	
+				cout<<endl;
+			break;
+			default:
+				condicion=-3;
+				cout<<"-       Salida     -      -"<<endl;
+				cout<<"---------------------------"<<endl;
+				cout<<"---------------------------"<<endl;
+		}
 		
-		indice=-3;
+		
+		
 	}
 				
 	return 0;
