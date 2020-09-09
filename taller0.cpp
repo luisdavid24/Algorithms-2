@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <iostream>
 #include <cstdlib>
+#include <string.h>
+
 //Este es el  taller 0 de algoritmos 2
 int vector[12];
 int radio,lado,menor,vecez;
+int numero_de_elemento;
+
 using namespace std;
 
+//Seccion para lo del "Radio"
 void figurasEsfericas(){
 	float perimetro=2.0*3.14*radio;
 	float area=3.14*radio*radio;
@@ -14,6 +19,8 @@ void figurasEsfericas(){
 	cout<<"El area de la circunferencia es de : "<<area<<endl; 
 	cout<<"El volumen de la circunferencia es de : "<<volumen<<endl; 
 }
+
+//seccion para lo del lado "L"
 void figurasCuadradas(){
 	float perimetro=lado*4;
 	float area=lado*lado;
@@ -22,6 +29,8 @@ void figurasCuadradas(){
 	cout<<"El valor del area es de : "<<area<<endl;
 	cout<<"El valor del volumen es de "<<volumen<<endl;
 }
+
+//Esta seccion es para el vector
 void llenado(int *vector){
 	for(int i=0;i<12;i++)
 	{	cout<<"Valor posicion "<<i<<":";
@@ -57,6 +66,8 @@ void vectorProcedimiento(){
 	busqueda(vector);
 	cout<<"El numero de vecez que aparece el menor es : "<<vecez;
 }
+
+
 int main(){ 
 //	cout<<"Escriba el valor del radio :";
 //	cin>>radio;
@@ -65,7 +76,17 @@ int main(){
 //	cout<<"Escriba el valor del lado :";
 //	cin>>lado;
 //	figurasCuadradas();
-	vectorProcedimiento();	
 
+//	vectorProcedimiento();	
+	
+	int indice=0;
+	while(indice>=0){
+		cout<<"---------------------------"<<endl;
+		cout<<"---------------------------"<<endl;
+		cout<<"--       Bienvenido      --"<<endl;
+		
+		indice=-3;
+	}
+				
 	return 0;
 }
