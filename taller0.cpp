@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <cstdlib>
-#include <string.h>
-
 //Este es el  taller 0 de algoritmos 2
 int vector[12];
 int radio,lado,menor,vecez;
@@ -68,13 +66,13 @@ void vectorProcedimiento(){
 }
 //Esta es la seccion para el tamaño de las variables
 void mostrarDatos(){
-	cout<<"Tamaño de char"<<sizeof(char)<<""<<endl;
-	cout<<"Tamaño de int"<<sizeof(int)<<""<<endl;
-	cout<<"Tamaño de  float"<<sizeof(float)<<""<<endl;
-	cout<<"Tamaño de double"<<sizeof(double)<<""<<endl;
+	cout<<"Tamaño de char: "<<sizeof(char)<<""<<endl;
+	cout<<"Tamaño de int: "<<sizeof(int)<<""<<endl;
+	cout<<"Tamaño de  float: "<<sizeof(float)<<""<<endl;
+	cout<<"Tamaño de double: "<<sizeof(double)<<""<<endl;
 }
-
-int main(){ 	
+//Este es el menu
+void menu(){
 	int condicion=0;
 	string nombre;
 	cout<<"---------------------------"<<endl;
@@ -126,6 +124,9 @@ int main(){
 		
 		
 	}
-				
+}
+int main(){ 	
+	system("color 0B");
+	menu();			
 	return 0;
 }
