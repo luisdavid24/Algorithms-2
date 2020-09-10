@@ -66,10 +66,17 @@ void vectorProcedimiento(){
 	busqueda(vector);
 	cout<<"El numero de vecez que aparece el menor es : "<<vecez;
 }
-
+//Esta es la seccion para el tamaño de las variables
+void mostrarDatos(){
+	cout<<"Tamaño de char"<<sizeof(char)<<""<<endl;
+	cout<<"Tamaño de int"<<sizeof(int)<<""<<endl;
+	cout<<"Tamaño de  float"<<sizeof(float)<<""<<endl;
+	cout<<"Tamaño de double"<<sizeof(double)<<""<<endl;
+}
 
 int main(){ 	
 	int condicion=0;
+	string nombre;
 	cout<<"---------------------------"<<endl;
 	cout<<"---------------------------"<<endl;
 	cout<<"--       Bienvenido      --"<<endl;
@@ -87,10 +94,11 @@ int main(){
 		cin>>condicion;
 		switch(condicion){
 			case 1:
-				cout<<"Falta esta parte"<<endl;
+				cout<<"Digite su nombre: ";cin>>nombre;
+				cout<<"Hola "<<nombre<<endl;
 			break;
 			case 2:
-				cout<<"Falta esta parte"<<endl;
+				mostrarDatos();
 			break;
 			case 3:
 					cout<<"Escriba el valor del radio :";
