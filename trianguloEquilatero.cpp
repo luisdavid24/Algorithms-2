@@ -15,7 +15,7 @@ void mostrar(int *vector,int numero)
 }
 void llenado(int numero,int *vector){
 	for(int i=0;i<numero;i++){
-		vector[i]=1;
+		vector[i]=9;
 		mostrar(vector,(i+1));
 	}
 }
