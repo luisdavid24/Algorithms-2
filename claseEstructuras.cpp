@@ -8,9 +8,10 @@ struct estudiante{
 	int id;
 };
 main(){
-	estudiante vectorEstudiante[3];
+	int n=3;
+	estudiante vectorEstudiante[n];
 	
-	for(int i=0; i<3;i++)
+	for(int i=0; i<n;i++)
 	{	cout<<"Ingrese la identificacion del estudiante: ";
 		cin>>vectorEstudiante[i].id;	
 	
@@ -24,7 +25,7 @@ main(){
 		cin>>vectorEstudiante[i].nota;
 		
 	}	
-	for(int i=0;i<3;i++){
+	for(int i=0;i<n;i++){
 		cout<<endl;
 		cout<<endl;
 		cout<<"usted  se ha registrado los datos del siguiente estudiante: ";
