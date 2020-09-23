@@ -6,23 +6,23 @@ int numero;
 
 using namespace std;
 
-void mostrar(int *vector,int numero)
+void mostrar(char *vector,int numero)
 {	for(int i=0;i<numero;i++)
 	{	cout<<vector[i];
 	}
 	cout<<endl;
 	
 }
-void llenado(int numero,int *vector){
+void llenado(int numero,char *vector){
 	for(int i=0;i<numero;i++){
-		vector[i]=9;
+		vector[i]='*';
 		mostrar(vector,(i+1));
 	}
 }
 int main(){ 
 	cout<<"Digite el numero de * de la base: ";
 	cin>>numero;
-	int vector[numero];
+	char vector[numero];
 	llenado(numero,vector);
 	return 0;
 }

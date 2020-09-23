@@ -8,7 +8,9 @@ struct estudiante{
 	int id;
 };
 main(){
-	int n=3;
+	int n;
+	cout<<"Ingrese la cantidad de estudiante: ";
+	cin>>n;
 	estudiante vectorEstudiante[n];
 	
 	for(int i=0; i<n;i++)
@@ -23,7 +25,7 @@ main(){
 	
 		cout<<"Ingrese la nota del estudiante: ";
 		cin>>vectorEstudiante[i].nota;
-		
+		cout<<endl;
 	}	
 	for(int i=0;i<n;i++){
 		cout<<endl;
@@ -34,7 +36,7 @@ main(){
 		cout<<endl;
 		cout<<"Nota definitiva:  "<<vectorEstudiante[i].nota;
 		cout<<endl;
-		cout<<"No. de indetificacion: "<<vectorEstudiante[i].id;	
+		cout<<"No. de indetificacion: "<<vectorEstudiante[i].id<<endl;	
 	}
 
 	return 0;
