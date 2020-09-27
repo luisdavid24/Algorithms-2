@@ -13,11 +13,13 @@ int main(){
 	void *malloc(size_t size);
 	total=(int *)malloc(sizeof(int));
 	*total=0;
+	
 	cout<<"Digite el numero de elementos del vector (max 10): ";
 	cin>>n;
 	vector=new int[n];
 	llenar(vector,n);
 	suma(vector,n,total);
+	
 	cout<<"La suma de todo los elemento es: "<<*total;
 	return 0;
 }
