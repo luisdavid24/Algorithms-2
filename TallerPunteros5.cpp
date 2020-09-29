@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cstdlib>
-//Este el punto numero 6 del taller de Punteros C.
+//Este el punto numero 5 del taller de Punteros C.
 int numero1,numero2;
 
 using namespace std;
