@@ -3,23 +3,16 @@
 #include <cstdlib>
 #include <string.h>
 //Este el punto numero 8 del taller de Punteros C.
-char *palabra;
-int numero;
+char palabra[60];
+int *numero;
 using namespace std;
-//char longitud(char cadena){
-//	int i=0;
-//	while(cadena[i]!='0'){
-//		i++;
-//	}
-//	return i;
-//}
+
 int main(){
-	void *malloc(size_t size);
-	palabra=(char*)malloc(sizeof(char));
-	//NO ESTA LISTO 
 	cout<<"Digite la palabra: ";
-	cin>>*palabra;
-	cout<<*palabra;
-	
+	cin>>palabra;
+	numero=(int *)malloc(sizeof(int));
+	*numero=strlen(palabra);
+	cout<<"La longitud de la cadena "<<palabra<<endl;
+	cout<<"Es "<<*numero;
 	return 0;
 }

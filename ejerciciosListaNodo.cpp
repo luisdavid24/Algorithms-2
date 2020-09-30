@@ -36,12 +36,10 @@ int main(){
 	recorre=cabe;
 	
 	while(recorre!=NULL){
-//		cout<<"Posicion: "<<recorre<<endl;
 		cout<<"Identificacion: "<<recorre->id<<endl;
 		cout<<"Nombre: "<<recorre->nombre<<endl;
 		cout<<"Edad: "<<recorre->edad<<endl;
 		cout<<"Sexo: "<<recorre->sexo<<endl;
-//		cout<<"Hacia donde apunta: "<<recorre->sgt;
 		recorre=recorre->sgt;
 		cout<<endl;
 		
