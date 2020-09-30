@@ -13,7 +13,7 @@ int main(){
 	cout<<"La direccion de m es: "<<&m<<endl;
 //	printf("La direccion de m es %i &m");
 	cout<<"La direccion de fx es: "<<&fx<<endl;
-	printf("la direccion de memoria de cht es: %p \n", &cht);
+	printf("la direccion de memoria de cht es: %c \n", &cht);
 	
 	return 0;
 }
