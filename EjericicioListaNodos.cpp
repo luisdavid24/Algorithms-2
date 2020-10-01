@@ -3,7 +3,6 @@
 #include <cstdlib>
 using namespace std;
 
-
 struct nodo{
 	int id;
 	char nombre[20];
@@ -26,7 +25,7 @@ nodo *crearnodo(int id,int edad,char sexo,char nombre[20],nodo *enlace){
 int main(){
 	nodo *primero,*recorre;
 	int id,cant,i=1,edad;
-	char sexo, nombre[20];
+	char sexo,nombre[20];
 	cout<<"Dige la cantidad de nodos ";cin>>cant;
 	
 	while(i<=cant){
@@ -39,7 +38,7 @@ int main(){
 				cout<<"Digite el sexo del estudiante femenino (f) o masculino (m): "<<endl;
 				cin>>sexo;
 				cout<<"Digite el nombre del estudiante: "<<endl;
-				cin>>nombre;
+				cin>>nombre[20];
 				primero=crearnodo(id,edad,sexo,nombre,NULL);
 			}else{
 				cout<<"Vamos a a llenar la info del estudiante "<<cant-i+1<<endl;
@@ -50,26 +49,23 @@ int main(){
 				cout<<"Digite el sexo del estudiante femenino (f) o masculino (m): "<<endl;
 				cin>>sexo;
 				cout<<"Digite el nombre del estudiante: "<<endl;
-				cin>>nombre;
+				cin>>nombre[20];
 				primero=crearnodo(id,edad,sexo,nombre,primero);
 			}
 			i++;
 	}
 	
-	
 	recorre=primero;
+	
 	while(recorre!=NULL){
 		cout<<"ID: "<<recorre->id<<endl;
 		cout<<"Edad: "<<recorre->edad<<endl;
 		cout<<"Sexo: "<<recorre->sexo<<endl;
-		cout<<"Nombre "<<recorre->nombre<<endl;
+		cout<<"Nombre "<<recorre->nombre[20]<<endl;
 		recorre=recorre->liga;
 		cout<<endl;
 		
 	}
-	
-	
-	
 	
 	return 0;
 }
