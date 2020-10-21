@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <conio.h>
 #include<iostream>
+
 using namespace std;
+
 struct nodo{
 	int info;
 	nodo *sgt;
 };
+
 nodo *cabe=NULL;
 void menu(void);
 void insertar_ordenadamente(void);
@@ -17,6 +20,7 @@ void recorrer(nodo *lista);
 main(){
 	menu();
 }
+
 void menu(void){
 	int opc;
 	do{
