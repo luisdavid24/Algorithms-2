@@ -18,12 +18,12 @@ void insertar(nodo *lista,nodo *posicion,int dato);
 void recorrer(nodo *lista,int n);
 void eliminar(nodo *&lista,int n,int condicion);
 void insertar_al_final();
-void ordenarAsecendentemente(nodo *lista,int n);
+void ordenarAsecendentemente(nodo *lista);
+void ordenarDesedente(nodo *lista);
 void liberarLista(nodo *&lista);
 void eliminarRepetidos(nodo *&lista);
 void buscarUnDato(nodo *lista);
 void insertar_al_inicio(nodo *&lista);
-int valorRepatido(nodo *lista,int aux);
 int veces(nodo *lista,int num,int n);
 
 
@@ -87,11 +87,12 @@ void menu(void){
 			break;
 			
 		case 10:
-			ordenarAsecendentemente(cabe,1);
+			ordenarAsecendentemente(cabe);
 			break;
 		case 11:
-			ordenarAsecendentemente(cabe,2);
-		default: cout<<"\n\nOPCION NO VALIDA!!";
+			ordenarDesedente(cabe);
+		default: 
+			cout<<"\n\nOPCION NO VALIDA!!";
 			getch();
 		}
 	}while(opc);
@@ -121,7 +122,6 @@ void insertar_ordenadamente(void){
 		cout<<"Ingrese el dato: ";
 		cin>>da;
 		nodo *y;
-		//la y es la posicion
 		y=buscar_donde(cabe,da);
 		insertar(cabe,y,da);
 		i++;
@@ -131,13 +131,11 @@ void insertar_ordenadamente(void){
 }
 
 nodo *buscar_donde(nodo *lista,int dato){
-	nodo *p=lista,*y=NULL; //la variable y es como una auxiliar
+	nodo *p=lista,*y=NULL; 
    	while(p!=NULL && p->info < dato){
 		y=p;
 		p=p->sgt;
-		//cuando entra en el bucle es para ordenarlo por decirlo de alguna manera
 	}
-	//retorna la posicion 
 	return y;
 }
 
@@ -216,16 +214,14 @@ void eliminar(nodo *&lista,int n,int condicion){
 
 void eliminarRepetidos(nodo *&lista){
 	if(lista!=NULL){
-		int aux=1;
-		while(aux!=0){
-			int i=0,n;
-			aux=valorRepatido(lista,aux);
+			int n,aux,i=0;
+			cout<<"Digita el valor que quieres eliminar: ";
+			cin>>aux;
 			n=veces(lista,aux,n);
 			while(i<=n){
 				eliminar(*&lista,aux,0);
 				i++;
 			}	
-		}
 	}else{
 		cout<<"Lista vacia"<<endl;
 	}
@@ -239,23 +235,6 @@ int veces(nodo *lista,int num,int n){
 		lista=lista->sgt;
 	}
 	return n;
-}
-int valorRepatido(nodo *lista,int aux){
-	int condicion=0;
-	nodo *p=lista,*q;
-	while(p!=NULL and condicion==0){
-		q=p->sgt;
-		while(q!=NULL and condicion==0){
-			if(p->info==q->info){
-				aux=p->info;
-				return aux;
-				condicion=5;
-			}
-			q=q->sgt;
-		}
-		p=p->sgt;	
-	}
-	return 0;
 }
 nodo *ultimo(nodo *lista){
 	nodo *p=lista;
@@ -285,48 +264,57 @@ void insertar_al_final(){
 	cout<<"\n Los datos fueron igresados correctamente";
 	system("pause>>null");
 }
-void ordenarAsecendentemente(nodo *lista,int n){
-	if(lista==0){
-		cout<<"\n La lista vacia no se puede ordenar \n";
-	}else{
+void ordenarAsecendentemente(nodo *lista){
+	if(lista!=NULL){
 		nodo *p=lista,*q;
 		int aux;
 		while(p->sgt!=NULL){
 			q=p->sgt;
-			if(n==1){
-				while(q!=NULL){
-					if(p->info>q->info){
-						aux=p->info;
-						p->info=q->info;	
-						q->info=aux;
-					}
-					q=q->sgt;
-				}	
-			}
-			if(n==2){
-				while(q!=NULL){
+			while(q!=NULL){
+				if(p->info>q->info){
+					aux=p->info;
+					p->info=q->info;	
+					q->info=aux;
+				}
+				q=q->sgt;
+			}	
+			
+			p=p->sgt;
+		}
+		cout<<"\n Los datos fueron ordenados correctamente\n";
+	}else{
+		cout<<"\n La lista vacia no se puede ordenar \n";
+	}
+}
+
+void ordenarDesedente(nodo *lista){
+	if(lista!=NULL){
+		nodo *p=lista,*q;
+		int aux;
+		while(p->sgt!=NULL){
+			q=p->sgt;
+			while(q!=NULL){
 					if(p->info < q->info){
 						aux=p->info;
 						p->info=q->info;	
 						q->info=aux;
 					}
 					q=q->sgt;
-				}
 			}
+			
 			p=p->sgt;
 		}
+		cout<<"\n Los datos fueron ordenados correctamente\n";
+	}else{
+		cout<<"\n La lista vacia no se puede ordenar \n";
 	}
-	cout<<"\n Los datos fueron ordenados correctamente\n";
 }
-
 
 void liberarLista(nodo *&lista){
 	nodo *aux=lista;
 	lista=aux->sgt;
 	delete aux;
 }
-
-
 void buscarUnDato(nodo *lista){
 	if(lista!=NULL){
 		int numero,condicion=0;
