@@ -91,6 +91,7 @@ void menu(void){
 			break;
 		case 11:
 			ordenarDesedente(cabe);
+			break;
 		default: 
 			cout<<"\n\nOPCION NO VALIDA!!";
 			getch();
