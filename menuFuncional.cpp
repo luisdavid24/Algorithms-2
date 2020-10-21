@@ -39,7 +39,7 @@ void menu(void){
 		cout<<"\t2 - Insertar siempre al principio \n"; 
 		cout<<"\t3 - Insertar datos Ordenadamente\n";
 		cout<<"\t4 - Borrar datos \n";
-		cout<<"\t5 - Eliminar  datos repetidos\n";//pendiente
+		cout<<"\t5 - Eliminar  datos repetidos\n";
 		cout<<"\t6 - Liberar lista \n";
 		cout<<"\t7 - Mostrar Lista\n";
 		cout<<"\t8 - Mostrar lista con detalles \n";
