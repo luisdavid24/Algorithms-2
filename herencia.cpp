@@ -38,5 +38,6 @@ int main(){
 	Triangulo Tri;
 	Tri.setAlto(8);
 	Tri.setAncho(6);
-	cout<<"El area del triangulo es "<<Tri.getArea()<endl;
-}
+	cout<<"El area del triangulo es "<<Tri.getArea()<<endl;
+	return 0;
+};
