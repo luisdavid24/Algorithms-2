@@ -33,3 +33,5 @@ CursorCol=2
 CursorRow=8
 TopLine=1
 LeftChar=1
+[Editors]
+Order=
