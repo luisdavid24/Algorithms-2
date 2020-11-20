@@ -8,11 +8,11 @@ class Account
 		double balance=0;
 	public:
 		Account(int accountNumber,double balance);
-		int getAccountNumber();
-		int getBalance();
+		int getAccountNumber()const;
+		int getBalance()const;
 		void setBalance(double balance);
-		void credit(double amount);
-		void debit(double amount);
+		void credit(double a);
+		void debit(double b);
 		void print();
 	
 };
