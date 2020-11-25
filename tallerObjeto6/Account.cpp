@@ -1,5 +1,7 @@
 #include "Account.h"
 #include <iostream>
+#include <iomanip>
+
 
 using namespace std;
 Account::Account(int accountNumber,double balance):accountNumber(accountNumber),balance(balance){}
@@ -14,11 +16,16 @@ void Account::setBalance(double balance){
 	this->balance=balance;
 }
 void Account::credit(double a){
-	balance-=a;
+	balance+=a;
 }
 void Account::debit(double b){
-	balance+=b;
+	if(b>balance){
+		cout<<"La cantidad es mayor que el saldo"<<endl;
+	}else{
+		balance-=b;	
+	}
+	
 }
 void Account::print(){
-	cout<<"A/C no: "<<accountNumber<<" Balance= $"<<balance<<endl;
+	cout<<"A/C no: "<<accountNumber<<" Balance= $"<<fixed<<setprecision(2)<<balance<<endl;
 }

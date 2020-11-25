@@ -5,9 +5,9 @@ class Account
 {
 	private:
 		int accountNumber;
-		double balance=0;
+		double balance;
 	public:
-		Account(int accountNumber,double balance);
+		Account(int accountNumber,double balance=0.0);
 		int getAccountNumber()const;
 		int getBalance()const;
 		void setBalance(double balance);
